@@ -10,38 +10,38 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import tn.esprit.spring.entities.Url;
-import tn.esprit.spring.service.UrlService;
+import tn.esprit.spring.entities.Suivi;
+import tn.esprit.spring.service.SuiviService;
 
 @RestController
-public class UrlRestControllerImpl {
-	
-
+public class SuiviRestControllerImpl {
 	@Autowired
-	UrlService urlservice;
+	SuiviService suiviservice;
 
 	@CrossOrigin(origins="*")
-	@PostMapping("/addurl")
+	@PostMapping("/addsuivi")
 	@ResponseBody
 
-	public Url addUrl(@RequestBody Url u) {
-	Url url = urlservice.addUrl(u);
-		return url;
+	public Suivi addSuivi(@RequestBody Suivi s) {
+	Suivi se=suiviservice.addSuivi(s);
+		return se;
 		
        
             
       
-	} // //
+	} 
 	
 
-	 @GetMapping("/urls")
+	 @GetMapping("/suivis")
 	  
 	  @ResponseBody 
-	  public List<Url> getUrl() { 
-		  List<Url> urls=urlservice.retrieveAllUrls();
-	  return urls; }
+	  public List<Suivi> getSuivi() { 
+		  List<Suivi> suivis=suiviservice.retrieveAllSuivis();
+	  return suivis; }
 	
 	
 
 	 
 }
+
+

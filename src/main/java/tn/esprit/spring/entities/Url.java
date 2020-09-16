@@ -10,12 +10,14 @@ import javax.persistence.Id;
 @Entity
 public class Url implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id; // Clé primaire
 	@Column(name = "url", nullable = false, unique = true)
 
 	private String url;
+	
 	public long getId() {
 		return id;
 	}
@@ -37,6 +39,9 @@ public class Url implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	@Override
+	public String toString() {
+		return "Url [id=" + id + ", url=" + url + "]";
+	}
 	
-
 }

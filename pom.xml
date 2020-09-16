@@ -35,6 +35,9 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId></dependency>
+		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
@@ -50,6 +53,21 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+        </dependency>
+        
+            
+       
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-ie-driver</artifactId>
+        </dependency>
 	</dependencies>
 
 	<build>
